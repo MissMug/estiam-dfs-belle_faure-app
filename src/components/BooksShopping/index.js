@@ -1,5 +1,4 @@
 import BookItem from "../BookItem";
-import reactDom from "react-dom";
 import styled from "styled-components";
 
 import conditionHumaine from "../../pictures/conditionHumaine.jpg";

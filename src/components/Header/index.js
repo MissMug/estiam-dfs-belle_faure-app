@@ -1,11 +1,13 @@
 import React from "react";
 import livreLogo from "../../pictures/livreLogo.png";
 import HeaderStyled from "./Styles/headerStyle";
-import MenuContainer from "./Styles/menuContainer";
-import ImageLogo from "./Styles/imageLogo";
-import NomAppliContainer from "./Styles/nomAppliContainer";
-import NomLogoContainer from "./Styles/nomLogoContainer";
-import styled from "styled-components";
+import MenuContainer from "./Styles/Menu/menuContainer";
+import ImageLogo from "./Styles/LogoNom/imageLogo";
+import NomAppliContainer from "./Styles/LogoNom/nomAppliContainer";
+import NomLogoContainer from "./Styles/LogoNom/nomLogoContainer";
+import ConnexionButton from "./Styles/User/connexionButton";
+import EmailMdPForm from "./Styles/User/emailMdPForm";
+import LogMenu from "./Styles/User/logMenu";
 
 const Menu = () => {
   return (
@@ -34,35 +36,13 @@ const LogoNom = () => {
 const User = () => {
   return (
     <LogMenu>
-      <ul>
-        <p>Mon compte BookOChange</p>
-        <EmailMdPForm>email</EmailMdPForm>
-        <EmailMdPForm>Mot de passe</EmailMdPForm>
-        <ConnexionButton>Connexion</ConnexionButton>
-      </ul>
+      <p>Mon compte BookOChange</p>
+      <EmailMdPForm>email</EmailMdPForm>
+      <EmailMdPForm>Mot de passe</EmailMdPForm>
+      <ConnexionButton>Connexion</ConnexionButton>
     </LogMenu>
   );
 };
-
-const LogMenu = styled.div`
-  background-color: #eaf2f8;
-  padding: 5px;
-  border: 1px solid #2980b9;
-  border-radius: 5px;
-`;
-
-const EmailMdPForm = styled.form`
-  background-color: white;
-  border: 1px solid #2980b9;
-  border-radius: 5px;
-  padding: 2px;
-`;
-
-const ConnexionButton = styled.button`
-  background-color: #5499c7;
-  border-color: #2980b9;
-  border-radius: 5px;
-`;
 
 const Header = () => {
   return (
