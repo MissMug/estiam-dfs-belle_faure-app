@@ -1,35 +1,25 @@
 import React from "react";
 import styled from "styled-components";
+import AddToCart from "../AddToCart";
 
 const BookItem = (props) => {
+  const [isAdd, setIsAdd] = React.useState(true);
+
+  const handleClick = () => {
+    setIsAdd(!isAdd);
+  };
+
   return (
     <ItemBook>
-      <img
-        src={props.imageBook}
-        height="auto"
-        width="auto"
-        text-align="center"
-        alt="Couv. Livre"
-      />
+      <img src={props.imageBook} height="auto" width="auto" alt="Couv. Livre" />
       <TitleBook>Titre : {props.titleBook}</TitleBook>
       <AuthorBook>Auteur : {props.authorBook}</AuthorBook>
       Genre : {props.typeBook} <br />
       Valeur : {props.pointNumberBook} point(s)
-      <ButtonStyle>Ajouter</ButtonStyle>
+      <AddToCart clickFunction={handleClick} isAdd={isAdd} />
     </ItemBook>
   );
 };
-
-const ButtonStyle = styled.button`
-  border: 10;
-  line-height: 1.5;
-  padding: 0 20px;
-  font-size: 1rem;
-  text-align: center;
-  color: #fff;
-  border-radius: 10px;
-  background-color: #5499c7;
-`;
 
 const TitleBook = styled.div`
   color: #1a5276;
@@ -48,8 +38,8 @@ const ItemBook = styled.div`
   align-items: safe center;
   justify-content: center;
   flex-direction: column;
-  width: 180px;
-  height: 200px;
+  width: 280px;
+  height: 250px;
   border: 4px solid #2471a3;
   border-radius: 20px;
 `;

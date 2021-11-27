@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-const LogMenu = styled.div`
+const LogMenu = styled.button`
   background-color: #eaf2f8;
-  padding: 5px;
+  padding: 10px;
   border: 1px solid #2980b9;
   border-radius: 5px;
-  justify-content: space-evenly;
+  justify-content: center;
 `;
 
 export default LogMenu;

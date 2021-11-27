@@ -1,7 +1,7 @@
 import React, { Component, useState } from "react";
 import styled from "styled-components";
-import ConnexionButton from "../Header/Styles/User/connexionButton";
-import TypeBooksList from "../TypeBooksList";
+import ConnexionButton from "../components/Header/Styles/User/connexionButton";
+import TypeBooksList from "../components/TypeBooksList";
 
 const NumberOfBooksPropose = () => {
   const [count, setCount] = useState(0);

@@ -3,7 +3,7 @@ import styled from "styled-components";
 const MenuContainer = styled.div`
   & > ul {
     display: flex;
-    gap: 0 10px;
+    gap: 10px;
   }
 
   & > ul > li {

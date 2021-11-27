@@ -1,18 +1,19 @@
 import React from "react";
-import FindOrPropose from "../components/FindOrPropose";
+import BookShopping from "../components/BooksShopping";
+import styled from "styled-components";
 
 const Home = () => {
-  return <FindOrPropose />;
+  return (
+    <Container>
+      <BookShopping />
+    </Container>
+  );
 };
 
-// const Home = () => {
-//   const [isBlue, setIsBlue] = React.useState(true);
-
-//   const handleClick = () => {
-//     setIsBlue(!isBlue);
-//   };
-
-//   return <FindOrPropose clickFunction={handleClick} isBlue={isBlue} />;
-// };
+const Container = styled.div`
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+`;
 
 export default Home;

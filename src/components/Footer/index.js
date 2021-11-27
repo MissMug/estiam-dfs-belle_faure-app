@@ -2,12 +2,13 @@ import React from "react";
 import FooterStyled from "./Styles/footerStyle";
 
 const Footer = () => {
-  const linkAcceuil = "Acceuil";
   return (
     <FooterStyled>
-      {linkAcceuil} <br />
-      Mentions légales <br />
-      Nous contacter <br />
+      <ul>
+        <a href="/">Acceuil</a> <br />
+        Mentions légales <br />
+        Nous contacter <br />
+      </ul>
     </FooterStyled>
   );
 };

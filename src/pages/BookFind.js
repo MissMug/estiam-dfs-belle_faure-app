@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import ConnexionButton from "../Header/Styles/User/connexionButton";
+import ConnexionButton from "../components/Header/Styles/User/connexionButton";
+import TypeBooksList from "../components/TypeBooksList";
 
 class BookFind extends Component {
   state = {
@@ -29,7 +30,7 @@ class BookFind extends Component {
           <Label htmlFor="authorBook">Auteur du Livre</Label>
           <Input type="text" id="authorBook" onChange={this.change} />
           <Label htmlFor="typeBook">Genre du Livre</Label>
-          <Input type="text" id="typeBook" onChange={this.change} />
+          <TypeBooksList />
           <ConnexionButton>Trouver</ConnexionButton>
         </form>
       </div>

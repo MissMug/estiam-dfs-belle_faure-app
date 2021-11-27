@@ -1,17 +1,27 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../../pages/Home";
-import BookFind from "../BookFind";
-import BookPropose from "../BookPropose";
-import NotFound from "../../pages/NotFound";
+import {
+  Home,
+  BookFind,
+  BookPropose,
+  NotFound,
+  Connection,
+  MyAccountChange,
+} from "../../pages";
 
-const Content = () => {
+const Content = ({ setUserToken }) => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<Home />} />
+        <Route
+          path="/connect"
+          exact
+          element={<Connection setUserToken={setUserToken} />}
+        />
         <Route path="/BookFind" exact element={<BookFind />} />
         <Route path="/BookPropose" exact element={<BookPropose />} />
+        <Route path="/MyAccountChange" exact element={<MyAccountChange />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
@@ -19,7 +29,3 @@ const Content = () => {
 };
 
 export default Content;
-
-//<Route path="/connect" exact>
-//<Connection setUserToken={setUserToken} />
-//</Route>

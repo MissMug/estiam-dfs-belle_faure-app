@@ -5,18 +5,21 @@ import MenuContainer from "./Styles/Menu/menuContainer";
 import ImageLogo from "./Styles/LogoNom/imageLogo";
 import NomAppliContainer from "./Styles/LogoNom/nomAppliContainer";
 import NomLogoContainer from "./Styles/LogoNom/nomLogoContainer";
-import ConnexionButton from "./Styles/User/connexionButton";
-import EmailMdPForm from "./Styles/User/emailMdPForm";
-import LogMenu from "./Styles/User/logMenu";
+import Connection from "../../pages/Connection";
 
 const Menu = () => {
   return (
     <MenuContainer>
       <ul>
-        <li>Books Find</li>
-        <li>Books Propose</li>
-        <li>Users</li>
-        <li>My account</li>
+        <li>
+          <a href="/BookFind">Trouver un livre</a>
+        </li>
+        <li>
+          <a href="/BookPropose">Proposer un livre</a>
+        </li>
+        <li>
+          <a href="/MyAccountChange">Mon compte</a>
+        </li>
       </ul>
     </MenuContainer>
   );
@@ -33,23 +36,12 @@ const LogoNom = () => {
   );
 };
 
-const User = () => {
-  return (
-    <LogMenu>
-      <p>Mon compte BookOChange</p>
-      <EmailMdPForm>email</EmailMdPForm>
-      <EmailMdPForm>Mot de passe</EmailMdPForm>
-      <ConnexionButton>Connexion</ConnexionButton>
-    </LogMenu>
-  );
-};
-
 const Header = () => {
   return (
     <HeaderStyled>
       <Menu />
       <LogoNom />
-      <User />
+      <Connection />
     </HeaderStyled>
   );
 };
